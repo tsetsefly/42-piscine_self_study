@@ -51,40 +51,44 @@ int digits(int num)
 	return (digits);
 }
 
-// int *fill_array(int start, int num_digits, int print_num, int *array)
-// {
-// 	while ((start < num_digits) && (print_num > 9))
-// 	{
-// 		print_num /= 10;
-// 		array[start] = print_num;
-// 		start++;
-// 	}
-// 	array[start] = print_num % 10;
-// 	return array;
-// }
+int check_num(int num_digits, int *print_array)
+{
+	int i;
+	int result;
+
+	i = 0;
+	result = 1;
+	while (i < num_digits)
+	{
+		
+	}
+	return (result);
+}
 
 void print_digits(int num_digits, int print_num)
 {
 	int i;
 	int start;
+	int max;
 	int print_array[10] = {0}; // technically cheating norminette, could create a function to fill array with 0s
 	
 	start = num_digits - digits(print_num);
-	// print_array = fill_array(start, num_digits, print_num, print_array);
-	while ((start < num_digits) && (print_num > 9))
+	max = num_digits;
+	while (print_num > 0)
 	{
+		print_array[num_digits - 1] = print_num % 10;
 		print_num /= 10;
-		print_array[start] = print_num;
-		start++;
+		num_digits--;
 	}
-	print_array[start] = print_num % 10;
 	i = 0;
-	while (i < num_digits)
+	if (check_num(max, print_array))
 	{
-		ft_putnbr(print_array[i]);
-		i++;
+		while (i < max)
+		{
+			ft_putnbr(print_array[i]);
+			i++;
+		}
 	}
-	ft_putchar('\n');
 }
 
 void ft_print_combn(int n)
@@ -97,8 +101,8 @@ void ft_print_combn(int n)
 	while (i <= max)
 	{
 		print_digits(n, i);
-		// ft_putnbr(digits(i));
-		// ft_putchar('\n');
+		ft_putchar(',');
+		ft_putchar(' ');
 		i++;
 	}
 }

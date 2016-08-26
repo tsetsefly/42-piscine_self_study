@@ -1,8 +1,21 @@
 #include <unistd.h>
+int g_counter = 0;
 
 void ft_putchar(char c)
 {
 	write(1, &c, 1);
+}
+
+void ft_putstr(char *str)
+{
+	int i;
+
+	i = 0;
+	while(str[i])
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
 }
 
 void ft_putnbr(int nb)
@@ -54,13 +67,21 @@ int digits(int num)
 int check_num(int num_digits, int *print_array)
 {
 	int i;
+	int j;
 	int result;
 
 	i = 0;
 	result = 1;
 	while (i < num_digits)
 	{
-		
+		j = i + 1;
+		while (j < num_digits)
+		{
+			if ((print_array[i] == print_array[j]) || (print_array[i] > print_array[j]))
+				return (0);
+			j++;
+		}
+		i++;
 	}
 	return (result);
 }
@@ -83,6 +104,12 @@ void print_digits(int num_digits, int print_num)
 	i = 0;
 	if (check_num(max, print_array))
 	{
+		if (g_counter != 0)
+		{
+			ft_putchar(',');
+			ft_putchar(' ');
+		}
+		g_counter++;
 		while (i < max)
 		{
 			ft_putnbr(print_array[i]);
@@ -96,20 +123,23 @@ void ft_print_combn(int n)
 	int i;
 	int max;
 
-	max = max_num(n);
-	i = 0;
-	while (i <= max)
+	if (n < 1 || n > 9)
+		ft_putstr("Error: invalid range, must be between 0 and 10 exclusive");
+	else
 	{
-		print_digits(n, i);
-		ft_putchar(',');
-		ft_putchar(' ');
-		i++;
+		max = max_num(n);
+		i = 0;
+		while (i <= max)
+		{
+			print_digits(n, i);
+			i++;
+		}	
 	}
 }
 
 int main ()
 {
-	ft_print_combn(2);
+	ft_print_combn(5);
 	ft_putchar('\n');
 	return 0;
 }

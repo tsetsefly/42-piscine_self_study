@@ -26,7 +26,7 @@ void ft_putstr(char *str)
 	int i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
 		ft_putchar(str[i]);
 		i++;
@@ -38,9 +38,9 @@ int ft_strlen(char *str)
 	int i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 		i++;
-	return(i);
+	return (i);
 }
 
 int ft_atoi(char *str)

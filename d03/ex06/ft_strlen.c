@@ -12,12 +12,12 @@ void ft_putnbr(int nb)
 	num = nb;
 	if (num < 0)
 	{
-		num *= -1;
 		ft_putchar('-');
+		num *= -1;
 	}
 	if (num > 9)
-		ft_putnbr(nb / 10);
-	ft_putchar(nb % 10 + 48);
+		ft_putnbr(num / 10);
+	ft_putchar(num % 10 + 48);
 }
 
 void ft_putstr(char *str)
@@ -25,7 +25,7 @@ void ft_putstr(char *str)
 	int i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
 		ft_putchar(str[i]);
 		i++;
@@ -37,9 +37,9 @@ int ft_strlen(char *str)
 	int i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 		i++;
-	return(i);
+	return (i);
 }
 
 int main ()

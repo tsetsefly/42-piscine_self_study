@@ -49,14 +49,14 @@ int ft_sqrt(int nb)
 			root--;
 		}
 	}
-	return (nb);
+	return (0);
 }
 
 int main()
 {
 	int result;
 
-	result = ft_sqrt(26);
+	result = ft_sqrt(100);
 	ft_putnbr(result);
 	return 0;
 }

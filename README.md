@@ -125,7 +125,7 @@ ex00: Norme error | ex01: Norme error | ex02: Norme error | ex03: Norme error | 
 
 ## d03
 
-## ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: Does not compile | ex06: OK | ex07: Does not compile | ex08: KO | ex09: OK
+ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: Does not compile | ex06: OK | ex07: Does not compile | ex08: KO | ex09: OK
 
 ## d04
 

@@ -33,7 +33,14 @@ int ft_putnbr(int nb)
 	return (num);
 }
 
+int ft_abs(int nb)
+{
+	if (nb < 0)
+		return (nb *= -1);
+	return (nb);
+}
+
 int ft_eight_queens_puzzle(void)
 {
-	
+
 }

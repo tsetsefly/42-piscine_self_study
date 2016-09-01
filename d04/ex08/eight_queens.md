@@ -6,7 +6,7 @@
 
 ## Program
 
-///c
+```c
 void try_queens(int *board, int current)
 {
 	int i;
@@ -31,9 +31,9 @@ void try_queens(int *board, int current)
 		}
 	}
 }
-///
+```
 
-///c
+```c
 int check_board(int *board, int current)
 {
 	int i;
@@ -49,7 +49,7 @@ int check_board(int *board, int current)
 	}
 	return (1);
 }
-///
+```
 
 ## Resources
 

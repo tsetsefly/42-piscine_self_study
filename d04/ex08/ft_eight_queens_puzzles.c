@@ -93,47 +93,38 @@ int check_board(int *board, int current)
 	return (1);
 }
 
-int try_queens(int *board, int current)
+void try_queens(int *board, int current)
 {
 	int i;
 
 	if (current == 8)
 	{
-		ft_putstr("wahoo!!!");
 		print_board(board);
-		getchar();
 		g_count++;
-		return (1);
+		return ;
 	}
 	else
 	{
 		i = 0;
 		while (i < 8)
 		{	
-			print_board(board);
-
 			board[current] = i;
 			if (check_board(board, current))
 			{
-				if (try_queens(board, current + 1))
-					return (1);
+				try_queens(board, current + 1);
 			}
 			i++;
 		}
-		return (0);
 	}
 }
 
 int main()
 {
 	int board[8] = {-1, -1, -1, -1, -1, -1, -1, -1};
-	int tmp;
 
-	tmp = try_queens(board, 0);
+	try_queens(board, 0);
 	ft_putchar('\n');
 	ft_putnbr(g_count);
-	ft_putchar('\n');
-	print_board(board);
 	ft_putchar('\n');
 	return 0;
 }

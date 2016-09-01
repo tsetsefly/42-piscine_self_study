@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <stdio.h>
 int g_count = 0;
 
 void ft_putchar(char c)
@@ -33,13 +32,6 @@ int ft_putnbr(int nb)
 		ft_putnbr(num / 10);
 	ft_putchar(num % 10 + 48);
 	return (num);
-}
-
-int ft_abs(int nb)
-{
-	if (nb < 0)
-		return (nb *= -1);
-	return (nb);
 }
 
 void print_board(int *board)
@@ -81,13 +73,9 @@ int check_board(int *board, int current)
 	while (i < current)
 	{
 		if (board[i] == board[current])
-		{
 			return (0);
-		}	
 		if (board[i] == board[current] + (current - i) || board[i] == board[current] - (current - i))
-		{
 			return (0);
-		}
 		i++;
 	}
 	return (1);
@@ -123,7 +111,7 @@ int main()
 	int board[8] = {-1, -1, -1, -1, -1, -1, -1, -1};
 
 	try_queens(board, 0);
-	ft_putchar('\n');
+	ft_putstr("Total unique solutions = ");
 	ft_putnbr(g_count);
 	ft_putchar('\n');
 	return 0;

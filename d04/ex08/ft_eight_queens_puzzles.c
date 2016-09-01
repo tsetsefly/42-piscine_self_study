@@ -108,7 +108,7 @@ void try_queens(int *board, int current)
 
 int main()
 {
-	int board[8] = {-1, -1, -1, -1, -1, -1, -1, -1};
+	int board[8];
 
 	try_queens(board, 0);
 	ft_putstr("Total unique solutions = ");

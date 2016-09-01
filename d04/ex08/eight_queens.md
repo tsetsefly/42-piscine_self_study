@@ -1,11 +1,22 @@
-# Eight queens puzzle
+# (N-) EightQueens Puzzle
 
 ## Recursive Backtracking Algorithm
 
+### Brute force recursion (vs. Brute force enumeration)
 
+1. **Termination condition:** if you reach row 9 (represented as row 8 because 0-ordered), will increment a global counter variable. Means that it has placed 8 valid queens on a board to reach that point. Send algorithm back at this point to search for additional solutions after the counter is incremented.
 
-## Program
+2. **Recusively placing the queens:** runs through the chessboard column-by-column and places queens in each column that don't conflict with columns before it. Can represent the chessboard in a 1-D array by ```array[col] = row``` where row is the row of the queen's placement. Once a valid board is found it will increment to the next column via ```current + 1```.
 
+3. **Backtracking:** Incrementally building candidate solutions, abandoning partial candiates (therefore can only be applied to problems that have partial solutions). Also good for things like Sudoku and other constraint satisfaction problems.
+
+4. **Depth-first order:** Traverses a search tree from the root down sub-tree by sub-tree. If its a valid solution it moves forward, otherwise it prunes the sub-tree.
+
+NOTE: This solution doesn't account for rotationally symmetrical solutions. There are 12 rotational symmetrical solutions and 92 solutions otherwise.
+
+## C Implementation
+
+### Placing the queens
 ```c
 void try_queens(int *board, int current)
 {
@@ -33,6 +44,7 @@ void try_queens(int *board, int current)
 }
 ```
 
+### Checking for validity of placed queens
 ```c
 int check_board(int *board, int current)
 {
@@ -58,3 +70,4 @@ int check_board(int *board, int current)
 3. [getchar() for in-program walkthrough](http://rabbit.eng.miami.edu/class/een218/getchar.html)
 4. [Another C solution](http://www.ccodechamp.com/c-program-of-n-queens-problem-solution-using-backtracking/)
 5. [Bitwise solution](http://www.ic-net.or.jp/home/takaken/e/queen/)
+6. [Harvard CS notes on recursion](http://www.fas.harvard.edu/~cscie119/lectures/recursion.pdf)

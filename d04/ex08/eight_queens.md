@@ -51,10 +51,13 @@ int check_board(int *board, int current)
 	int i;
 
 	i = 0;
+	// iterates col-by-col to avoid conflicts within a column
 	while (i < current)
 	{
+		// checks for conflicts between rows
 		if (board[i] == board[current])
 			return (0);
+		// checks for conflicts along the diagonals of each queen
 		if (board[i] == board[current] + (current - i) || board[i] == board[current] - (current - i))
 			return (0);
 		i++;

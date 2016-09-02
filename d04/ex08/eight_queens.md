@@ -1,8 +1,8 @@
-# (N-) EightQueens Puzzle
+# (N-) Eight Queens Puzzle
 
 ## Recursive Backtracking Algorithm
 
-### Brute force recursion (vs. Brute force enumeration)
+### Brute force recursion (vs. brute force enumeration)
 
 1. **Termination condition:** if you reach row 9 (represented as row 8 because 0-ordered), will increment a global counter variable. Means that it has placed 8 valid queens on a board to reach that point. Send algorithm back at this point to search for additional solutions after the counter is incremented.
 
@@ -12,7 +12,7 @@
 
 4. **Depth-first order:** Traverses a search tree from the root down sub-tree by sub-tree. If its a valid solution it moves forward, otherwise it prunes the sub-tree.
 
-NOTE: This solution doesn't account for rotationally symmetrical solutions. There are 12 rotational symmetrical solutions and 92 solutions otherwise.
+**NOTE:** This solution doesn't account for rotationally symmetrical solutions. There are 12 rotational symmetrical solutions and 92 solutions otherwise.
 
 ## C Implementation
 
@@ -62,6 +62,16 @@ int check_board(int *board, int current)
 	return (1);
 }
 ```
+
+## Elements of recursion
+
+1. **Base case:** reduction of a larger problem into a simpler problem that can be solved directly (in this question, ```current == 8```. This stops the recursion.
+
+2. **Recursive case:** the case that is executed into the base case is reached. Reduces the larger problem into one or more simpler problems. These cases call themselves.
+
+3. You can have multiple recursive and base cases. Generally use parameters that bring the problem closer to a base case.
+
+4. **Stack overflow:** occurs when you have infinite recursion. Literally means there is no more room for new frames on the stack.
 
 ## Resources
 

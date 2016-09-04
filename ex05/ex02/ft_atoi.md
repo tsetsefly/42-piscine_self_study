@@ -8,7 +8,7 @@ num = num * 10 + str[i] - '0';
 ```
 1. **Num:** stores the existing captured numbers
 2. ```* 10```: takes captured numbers so far and iteratively adjusts for tens-place
-3.```str[i] - '0'```: uses ASCII/decimal range to convert to ones-place integer
+3. ```str[i] - '0'```: uses ASCII/decimal range to convert to ones-place integer
 
 ### [ASCII table](http://blockofcodes.blogspot.com/2013/07/how-to-convert-string-to-integer-in-c.html)
 |Character	|Decimal Value	|

@@ -59,6 +59,11 @@ int ft_atoi(char *str)
 
 int main ()
 {
+	ft_putstr("ft_atoi: ");
 	ft_putnbr(ft_atoi("-42"));
+	ft_putchar('\n');
+	ft_putstr("   atoi: ");
+	ft_putnbr(atoi("-42"));
+	ft_putchar('\n');
 	return 0;
 }

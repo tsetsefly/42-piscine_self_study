@@ -6,7 +6,7 @@
 
 1. **Termination condition:** if you reach row 9 (represented as row 8 because 0-ordered), will increment a global counter variable. Means that it has placed 8 valid queens on a board to reach that point. Send algorithm back at this point to search for additional solutions after the counter is incremented.
 
-2. **Recusively placing the queens:** runs through the chessboard column-by-column and places queens in each column that don't conflict with columns before it. Can represent the chessboard in a 1-D array by ```array[col] = row``` where row is the row of the queen's placement. Once a valid board is found it will increment to the next column via ```current + 1```.
+2. **Recusively placing the queens:** runs through the chessboard column-by-column and places queens in each column that don't conflict with columns before it. Can represent the chessboard in a 1-D array by ```array[col] = row``` where row is the row of the queen's placement. After finding a set of valid queens the algorithm will increment to the next column via ```current + 1```.
 
 3. **Backtracking:** Incrementally building candidate solutions, abandoning partial candiates (therefore can only be applied to problems that have partial solutions). Also good for things like Sudoku and other constraint satisfaction problems.
 

@@ -18,6 +18,21 @@ void ft_putstr(char *str)
 	}
 }
 
+void ft_putnbr(int nb)
+{
+	long num;
+
+	num = nb;
+	if (num < 0)
+	{
+		num *=-1;
+		ft_putchar('-');
+	}
+	if (num > 9)
+		ft_putnbr(num / 10);
+	ft_putchar(num % 10 + '0');
+}
+
 int ft_strlen(char *str)
 {
 	int i;
@@ -60,7 +75,9 @@ int main ()
 	char *to_find;
 
 	str = "    the quick brown fox jumps over the lazy dog... ";
-	to_find = "xf";
+	to_find = "ab";
+	ft_putnbr(ft_strlen(to_find));
+	ft_putchar('\n');
 	ft_putstr("ft_strstr = ");
 	ft_putstr(ft_strstr(str, to_find));
 	ft_putchar('\n');

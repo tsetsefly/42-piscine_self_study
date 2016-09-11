@@ -33,12 +33,12 @@ void ft_putnbr(int nb)
 	ft_putchar(num % 10 + '0');
 }
 
-int ft_strcmp(char *s1, char *s2)
+int ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int i;
+	unsigned int i;
 
 	i = 0;
-	while(s1[i] || s2[i])
+	while((s1[i] || s2[i]) && i < n)
 	{
 		if (s1[i] < s2[i])
 			return (s1[i] - s2[i]);
@@ -54,13 +54,13 @@ int main ()
 	char *s1;
 	char *s2;
 
-	s1 = "";
+	s1 = "bananaad";
 	s2 = "bananaaa";
-	ft_putstr("ft_strcmp = ");
-	ft_putnbr(ft_strcmp(s1, s2));
+	ft_putstr("ft_strncmp = ");
+	ft_putnbr(ft_strncmp(s1, s2, 5));
 	ft_putchar('\n');
-	ft_putstr("   strcmp = ");
-	ft_putnbr(strcmp(s1, s2));
+	ft_putstr("   strncmp = ");
+	ft_putnbr(strncmp(s1, s2, 5));
 	ft_putchar('\n');
 	return (0);
 }

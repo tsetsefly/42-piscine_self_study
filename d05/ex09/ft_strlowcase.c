@@ -17,7 +17,7 @@ void ft_putstr(char *str)
 	}
 }
 
-char *ft_strupcase(char *str)
+char *ft_strlowcase(char *str)
 {
 	int i;
 
@@ -25,8 +25,8 @@ char *ft_strupcase(char *str)
 	while(str[i])
 	{
 		
-		if (str[i] >= 'a' && str[i] <= 'z')
-			str[i] -= 'a' - 'A';
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] += 'a' - 'A';
 		i++;
 	}
 	return (str);
@@ -36,6 +36,6 @@ int main ()
 {
 	char str[] = "aBCDeFGHi";
 
-	ft_putstr(ft_strupcase(str));
+	ft_putstr(ft_strlowcase(str));
 	return (0);
 }

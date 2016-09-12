@@ -1,12 +1,12 @@
 # Character array manipulation
 
-## ```char *str``` vs. ```char str[] = "xyz"``` vs ```char *str[]```
+## ```char *str``` vs. ```char str[] = "xyz"``` vs. ```char *str[]```
 
-```char *str = "xyz``` = literally a pointer to a character that implicitly defines a string in subsequent memory addresses. Requires null termination of array with ```\0```. Declares ```str``` as a char pointer and initializes with string literal ```"xyz"```. Cannot modify a string literal (will cause a seg-fault).
+```char *str = "xyz``` = literally a **pointer to a character** that implicitly defines a string in subsequent memory addresses. Requires null termination of array with ```\0```. Declares ```str``` as a char pointer and initializes with string literal ```"xyz"```. Cannot modify a string literal (will cause a seg-fault).
 
-```char str[] = "xyz"``` = declares a string of size ```4``` and initializes it with ```"xyz"``` as well as a null terminator ```\0```. You can modify the contents of this string.
+```char str[] = "xyz"``` = **declares a string** of size ```4``` **and initializes** it with ```"xyz"``` as well as a null terminator ```\0```. You can modify the contents of this string.
 
-```char *str[]``` = pointer to array of null-terminated strings (```char *str```)
+```char *str[]``` = **pointer to array of null-terminated strings** (made up of ```char *str```)
 
 ## ft_atoi.c
 

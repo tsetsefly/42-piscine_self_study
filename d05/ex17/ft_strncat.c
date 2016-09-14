@@ -34,12 +34,14 @@ char *ft_strncat(char *dest, char *src, int nb)
 
 	dest_len = ft_strlen(dest);
 	i = 0;
-	while (src[i])
+	if (nb < 0)
+		nb = ft_strlen(src);
+	while (src[i] && i < nb)
 	{
 		dest[dest_len + i] = src[i];
 		i++;
 	}
-	dest[dest_len + i] = '\0';
+	dest[nb] = '\0';
 	return (dest);
 }
 
@@ -48,7 +50,7 @@ int main ()
 	char dest[] = "abcdefg";
 	char src[] = "hijklmnop";
 
-	ft_putstr(ft_strncat(dest, src, 16));
+	ft_putstr(ft_strncat(dest, src, 12));
 	ft_putchar('\n');
 	return (0);
 }

@@ -17,6 +17,21 @@ void ft_putstr(char *str)
 	}
 }
 
+void ft_putnbr(int nb)
+{
+	long num;
+
+	num = nb;
+	if (nb < 0)
+	{
+		num *= -1;
+		ft_putchar('-');
+	}
+	if (num > 9)
+		ft_putnbr(num / 10);
+	ft_putchar(num % 10 + '0');
+}
+
 int ft_strlen(char *str)
 {
 	int i;
@@ -29,25 +44,26 @@ int ft_strlen(char *str)
 
 unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	
-}
-
-char *ft_strncat(char *dest, char *src, int nb)
-{
-	int i;
-	int dest_len;
+	long dest_len;
+	long src_len;
+	long i;
+	long s;
 
 	dest_len = ft_strlen(dest);
-	i = 0;
-	if (nb < 0)
-		nb = ft_strlen(src);
-	while (src[i] && i < nb)
+	src_len = ft_strlen(src);
+	s = size;
+	i = 0;	
+	while ((i < s - dest_len - 1) && i < src_len)
 	{
-		dest[dest_len + i] = src[i];
+		dest[i + dest_len] = src[i];
 		i++;
 	}
-	dest[nb] = '\0';
-	return (dest);
+	if (s - dest_len - 1 > 0)
+		dest[i + dest_len] = '\0';
+	if (s < dest_len)
+		return (s + src_len);
+	else
+		return (dest_len + src_len);
 }
 
 int main ()
@@ -55,7 +71,7 @@ int main ()
 	char dest[] = "abcdefg";
 	char src[] = "hijklmnop";
 
-	ft_putstr(ft_strncat(dest, src, 12));
+	ft_putnbr(ft_strlcat(dest, src, 16));
 	ft_putchar('\n');
 	return (0);
 }

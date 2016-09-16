@@ -1,3 +1,17 @@
+# Additional README links
+
+[d00x01](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d00/ex01/ex01.md)
+[d00x02](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d00/ex02/ex02.md)
+[d00x03](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d00/ex03/ex03.md)
+[d00x04](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d00/ex04/ex04.md)
+[d00x05](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d00/ex05/ex05.md)
+[d00x06](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d00/ex06/ex06.md)
+[d00x07](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d00/ex07/ex07.md)
+[d00x08](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d00/ex08/ex08.md)
+[d00x09](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d00/ex09/ex09.md)
+[d00x10](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d00/ex10/ex10.md)
+[d00x11](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d00/ex11/ex11.md)
+
 # Dan's original traces
 
 ## d00

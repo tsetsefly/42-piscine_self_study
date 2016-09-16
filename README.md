@@ -12,6 +12,9 @@
 [d00x10](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d00/ex10/ex10.md)
 [d00x11](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d00/ex11/ex11.md)
 
+[d01x01](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d01/ex01/d01x01.md)
+[d01x02](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d01/ex02/d01x02.md)
+
 # Dan's original traces
 
 ## d00

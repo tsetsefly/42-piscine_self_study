@@ -17,6 +17,8 @@
 
 [d04x08: eight queens](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d04/ex08/eight_queens.md)
 
+[d05x02: atoi](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d05/ex02/ft_atoi.md)
+
 # Dan's original traces
 
 ## d00

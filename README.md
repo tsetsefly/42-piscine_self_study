@@ -15,6 +15,8 @@
 [d01x01](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d01/ex01/d01x01.md)
 [d01x02](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d01/ex02/d01x02.md)
 
+[d04x08: eight queens](https://github.com/tsetsefly/Study_42_Piscine/blob/master/d04/ex08/eight_queens.md)
+
 # Dan's original traces
 
 ## d00

@@ -6,7 +6,7 @@
 ```c
 num = num * 10 + str[i] - '0';
 ```
-1. **Num:** stores the existing captured numbers
+1. ```num``` stores the existing captured numbers
 2. ```* 10```: takes captured numbers so far and iteratively adjusts for tens-place
 3. ```str[i] - '0'```: uses ASCII/decimal range to convert to ones-place integer
 

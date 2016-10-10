@@ -46,3 +46,10 @@ while (str[i] >= '0' && str[i] <= '9')
 	i++;
 }
 ```
+
+## Alternative implementation for lead character check
+```
+while (str[i] == ' ' || str[i] == '\r' || str[i] == '\n' || str[i] == '\t'
+		|| str[i] == '\v' || str[i] == '\f')
+		i++;
+```

@@ -68,9 +68,9 @@ int check_board(int *board, int current)
 
 ## Elements of recursion
 
-1. **Base case:** reduction of a larger problem into a simpler problem that can be solved directly (in this question, ```current == 8```. This stops the recursion.
+1. **Base case / Termination case:** reduction of a larger problem into a simpler problem that can be solved directly (in this question, ```current == 8```. This stops the recursion.
 
-2. **Recursive case:** the case that is executed into the base case is reached. Reduces the larger problem into one or more simpler problems. These cases call themselves.
+2. **Recursive case:** the case that is executed until the base case is reached. Reduces the larger problem into one or more simpler problems. These cases call themselves.
 
 3. You can have multiple recursive and base cases. Generally use parameters that bring the problem closer to a base case.
 
